@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("./images/3135763.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    color: rgb(143, 244, 11);
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-gap: 10px;
+}
+
+.cell{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.cell:hover,
+.cell.clicked {
+    transform: scale(1.1); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); 
+    background-color: #4CAF50; 
+    color: white; 
+}
+
+#result-message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
